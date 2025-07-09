@@ -38,11 +38,11 @@ public class HelloServletTest {
                 "Nội dung đầu ra không chứa chuỗi dự kiến");
     }
 
-    @Test
-    public void testFailure() {
+   // @Test
+   // public void testFailure() {
         // Test này luôn luôn fail để minh chứng CI/CD phát hiện lỗi
-        org.junit.jupiter.api.Assertions.fail("Test này sẽ luôn luôn fail để kiểm tra CI/CD thui nha");
-    }
+        //org.junit.jupiter.api.Assertions.fail("Test này sẽ luôn luôn fail để kiểm tra CI/CD thui nha");
+    //}
 
     @Test
     public void testMessageOutput() throws Exception {
