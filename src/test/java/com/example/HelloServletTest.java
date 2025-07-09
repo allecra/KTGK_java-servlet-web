@@ -41,7 +41,7 @@ public class HelloServletTest {
     @Test
     public void testFailure() {
         // Test này luôn luôn fail để minh chứng CI/CD phát hiện lỗi
-        org.junit.jupiter.api.Assertions.fail("Test này luôn luôn fail để kiểm tra CI/CD");
+        org.junit.jupiter.api.Assertions.fail("Test này luôn luôn fail để kiểm tra CI/CD thui nha");
     }
 
     @Test
@@ -64,7 +64,7 @@ public class HelloServletTest {
         String output = stringWriter.toString();
         org.junit.jupiter.api.Assertions.assertTrue(
             output.contains("Xin chao từ HelloServlet!"),
-            "Nội dung đầu ra không đúng chuỗi mong đợi"
+            "Nội dung đầu ra không đúng chuỗi mong đợi roài hehe"
         );
     }
 }
