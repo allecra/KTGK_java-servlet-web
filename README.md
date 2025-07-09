@@ -1,45 +1,29 @@
-﻿# KTGK_java-servlet-web
-**CI/CD Java Servlet**
-Bài luận nhóm học phần Triển khai phần mềm – Đề tài triển khai CI/CD với Java Servlet sử dụng [GitHub Actions] / [Jenkins] / [GitLab CI].
+# CI/CD Java Servlet 
 
-**Giới thiệu**
-Đây là project mẫu triển khai CI/CD cho ứng dụng web Java Servlet.
+> Bài tập thục hành nhóm học phần Triển khai phần mềm – Đề tài triển khai CI/CD với Java Servlet sử dụng [GitHub Actions]
 
-**Nền tảng**: GitHub
+## Giới thiệu
 
-**CI/CD Tool**: GitHub Actions
+Đây là project triển khai **CI/CD** cho ứng dụng web Java Servlet.
 
-**Build tool**: Maven (cấu hình DevOps)
+- Nền tảng: GitHub
 
-**Test**: JUnit
+- CI/CD Tool: GitHub Actions
 
-**Tự động: Build + Test mỗi lần push hoặc merge**
+- Build tool: Maven (cấu hình DevOps)
 
-**Thành viên nhóm**
+- Test: JUnit
 
-Vai trò	Họ tên	Ghi chú
+- Tự động: Build + Test mỗi lần push hoặc merge
 
-**Team Leader**	Nguyễn Thị Tâm	Quản lý repo & phân công
+##  Thành viên nhóm
 
-**Dev 1**	Nguyễn Thị Xinh	Code module đăng nhập
-
-**Dev 2**	Đỗ Thị Phúc	Code module quản lý tài khoản
-
-**DevOps**	Nguyễn Thị Thanh Ngân	Thiết lập Maven + Build tool
-
-**CI/CD Engineer**	Hoàng Minh Thiện	Thiết lập workflow CI/CD
+| Vai trò        | Họ tên                 | Ghi chú                        |
+|----------------|------------------------|--------------------------------|
+| Team Leader    | Nguyễn Thị Tâm         | Quản lý repo & phân công       |
+| Dev 1          | Nguyễn Thị Xinh        | update nhánh feature-jv2          |
+| Dev 2          | Đỗ Thị Phúc            | update nhánh feature-jv1   |
+| Dev 3         | Nguyễn Thị Thanh Ngân  | update nhánh feature-fr    |
+| CI/CD Engineer | Hoàng Minh Thiện       | Thiết lập workflow CI/CD       |
 
 
-**Quy trình Git**
-
-main                 # Nhánh chính
-
-dev                  # Nhánh phát triển
-
-feature/login-module        # Dev1 code chức năng đăng nhập
-
-feature/account-module      # Dev2 code chức năng tài khoản
-
-ci-cd-pipeline        # CI/CD config (.github/workflows)
-
-devops-config         # Cấu hình Maven/Gradle
