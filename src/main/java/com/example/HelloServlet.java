@@ -9,14 +9,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/hello9")
+@WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        out.println("<h1>Hello I am a servlet,chú ý nhánh của ---feature hello-10.7.2025!</h1>");
+        out.println("<h1>Hello, I am a servlet,chú ý nhánh của ---feature hello-10.7.2025!</h1>");
 
     }
 }
