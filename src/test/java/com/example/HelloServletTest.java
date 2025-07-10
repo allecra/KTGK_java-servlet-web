@@ -38,11 +38,12 @@ public class HelloServletTest {
                 "Nội dung đầu ra không chứa chuỗi dự kiến");
     }
 
-   // @Test
-   // public void testFailure() {
-        // Test này luôn luôn fail để minh chứng CI/CD phát hiện lỗi
-        //org.junit.jupiter.api.Assertions.fail("Test này sẽ luôn luôn fail để kiểm tra CI/CD thui nha");
-    //}
+    // @Test
+    // public void testFailure() {
+    // Test này luôn luôn fail để minh chứng CI/CD phát hiện lỗi
+    // org.junit.jupiter.api.Assertions.fail("Test này sẽ luôn luôn fail để kiểm tra
+    // CI/CD thui nha");
+    // }
 
     @Test
     public void testMessageOutput() throws Exception {
@@ -63,8 +64,30 @@ public class HelloServletTest {
         writer.flush();
         String output = stringWriter.toString();
         org.junit.jupiter.api.Assertions.assertTrue(
-            output.contains("Xin chao từ HelloServlet!"),
-            "Nội dung đầu ra không đúng chuỗi mong đợi roài hehe"
-        );
+                output.contains("Xin chao từ HelloServlet!"),
+                "Nội dung đầu ra không đúng chuỗi mong đợi roài hehe");
+    }
+
+    @Test
+    public void testDoGetWithActualOutput() throws Exception {
+        // Mock các đối tượng Servlet
+        HttpServletRequest request = Mockito.mock(HttpServletRequest.class);
+        HttpServletResponse response = Mockito.mock(HttpServletResponse.class);
+
+        // Giả lập PrintWriter để bắt nội dung đầu ra
+        StringWriter stringWriter = new StringWriter();
+        PrintWriter writer = new PrintWriter(stringWriter);
+        Mockito.when(response.getWriter()).thenReturn(writer);
+
+        // Tạo và gọi phương thức doGet
+        HelloServlet servlet = new HelloServlet();
+        servlet.doGet(request, response);
+
+        // Kiểm tra nội dung đầu ra
+        writer.flush();
+        String output = stringWriter.toString();
+        org.junit.jupiter.api.Assertions.assertTrue(
+                output.contains("<h1>Hello t là ĐỖ THỊ PHÚC nè hehe</h1>"),
+                "Nội dung đầu ra không đúng chuỗi mong đợi");
     }
 }
