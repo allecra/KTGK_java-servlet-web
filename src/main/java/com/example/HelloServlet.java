@@ -11,12 +11,13 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        out.println("<h1>Hello, I am a servlet,chú ý nhánh của ---feature hello-14.07.2025</h1>");
+        out.println("<h1>Hello, I am a servlet,chú ý nhánh của ---feature hello-14.07.2025!</h1>");
 
     }
 }
