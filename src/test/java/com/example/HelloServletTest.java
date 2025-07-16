@@ -90,4 +90,10 @@ public class HelloServletTest {
                 output.contains("<h1>Hello t là ĐỖ THỊ PHÚC nè hehe</h1>"),
                 "Nội dung đầu ra không đúng chuỗi mong đợi");
     }
+
+    // Unit test này luôn luôn fail để kiểm tra CI/CD
+    @Test
+    public void testAlwaysFail() {
+        org.junit.jupiter.api.Assertions.fail("Test này luôn luôn fail để kiểm tra CI/CD");
+    }
 }
