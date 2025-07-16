@@ -11,7 +11,7 @@ public class InfoServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        out.println("<h2>Thông tin nhóm:</h2>");
+        out.println("<h2>Thông tin nha bay:</h2>");
         out.println("<ul>");
         out.println("<li>Nguyễn Văn A - MSSV: 123</li>");
         out.println("<li>Trần Thị B - MSSV: 456</li>");
