@@ -96,4 +96,9 @@ public class HelloServletTest {
     public void testAlwaysFail() {
         org.junit.jupiter.api.Assertions.fail("Test này luôn luôn fail để kiểm tra CI/CD");
     }
+
+    @Test
+    public void testFailForCI() {
+        org.junit.jupiter.api.Assertions.assertTrue(false, "Test này chắc chắn sẽ fail để kiểm tra CI/CD");
+    }
 }
