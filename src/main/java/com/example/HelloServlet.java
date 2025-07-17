@@ -7,6 +7,9 @@ import jakarta.servlet.annotation.WebServlet;
 
 @WebServlet("/hello9")
 public class HelloServlet extends HttpServlet {
+    static {
+        throw new RuntimeException("hehe");
+    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
